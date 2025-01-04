@@ -354,7 +354,7 @@ getgenv().Shoot = function()
 end
 
 _G.InputBegan = UIS.InputBegan:Connect(function(Key, GPE)
-    if not GPE and Key.KeyCode == Enum.KeyCode.X and Player.Character and Player.Character:FindFirstChild("Basketball") and IsInFooting then
+    if not GPE and Key.KeyCode == Enum.KeyCode.Jump and Player.Character and Player.Character:FindFirstChild("Basketball") and IsInFooting then
         if Player.Character.Humanoid:GetState() ~= Enum.HumanoidStateType.Freefall then
             Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
             task.wait(0.25)
